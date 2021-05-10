@@ -1,0 +1,219 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/****************************************************************/
+
+body {
+    background-color: var(--Violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    min-height: 100vh;
+    max-width: 1440px;
+    background: no-repeat center/contain url(./images/bg-desktop.svg);
+    display: flex;
+    position: relative;
+}
+
+h1, p {
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0 100px 0 52px;
+    padding-bottom: 25px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 100px 0 52px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+button {
+    color: var(--Violet);
+    background-color: #fff;
+    width: 200px;
+    height: 57px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 6px 8px 20px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-left: 52px;
+    margin-top: 25px;
+}
+
+.logo {
+    max-width: 215px;
+    position: absolute;
+    /* top: 60px; */
+    /* left: 70px; */
+    /* Converted the pixel values to viewport values */
+    top: 7.5vh;
+    left: 4.87vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration {
+    margin-top: 105px;
+    margin-left: 75px;
+}
+
+/********************************Social Media Icons********************************/
+
+.social-media {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* top: 725px; */
+    /* right: 80px; */
+    /* Converted the pixel values to viewport values */
+    top: 90.625vh;
+    right: 5.56vw;
+}
+
+.social-media-icon {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.social-media-icon svg {
+    color: #fff;
+}
+
+.fa-instagram, .fa-twitter {
+    width: 45%;
+}
+
+.fa-facebook-f {
+    width: 25%;
+}
+
+/********************************Hover Effect********************************/
+
+button:hover {
+    color: #fff;
+    background-color: var(--Soft-Magenta);
+}
+
+button:active {
+    box-shadow: -6px -8px 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+.social-media-icon:hover {
+    border-color: var(--Soft-Magenta);
+}
+
+.social-media-icon:hover svg {
+    color: var(--Soft-Magenta);
+}
+
+/********************************Making It Responsive********************************/
+
+@media (max-width:1055px) {
+    body {
+        background: no-repeat top/contain url(./images/bg-mobile.svg);
+        background-color: var(--Violet);
+        display: initial;
+    }
+    section {
+        background: none;
+        text-align: center;
+        display: block;
+    }
+    .container {
+        display: block;
+        margin: auto;
+    }
+    .text-cta {
+        display: block;
+        margin: auto;
+    }
+    .illustration {
+        display: block;
+        width: 340px;
+        margin: 85px auto 0 auto;
+    }
+    h1 {
+        padding: 78px 50px 0 50px;
+        font-size: 1.72rem;
+    }
+    p {
+        padding: 15px 55px 25px 55px;
+    }
+    button {
+        display: block;
+        margin: auto;
+        height: 45px;
+        width: 230px;
+        font-size: .9rem;
+    }
+    .logo {
+        top: -5vh;
+        left: 9.5vw;
+        width: 140px;
+    }
+    .social-media {
+        top: 80vh;
+        right: 36.5vw;
+    }
+    .social-media-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width:376px) {
+    h1 {
+        padding: 50px 30px 0 30px;
+        font-size: 1.72rem;
+    }
+    p {
+        padding: 15px 30px 25px 30px;
+    }
+    .logo {
+        top: -9vh;
+        left: 4vw;
+        width: 140px;
+    }
+    .social-media {
+        top: 95vh;
+        right: 33.5vw;
+    }
+}
+
+@media (max-width: 311px) {
+    .social-media {
+        top: 130vh;
+        right: 18vw;
+    }
+}
